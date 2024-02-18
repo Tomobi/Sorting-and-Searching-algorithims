@@ -1,0 +1,15 @@
+ALGORITHM insertion_sort
+VAR
+    i, n,  : INTEGER;
+    cards : ARRAY_OF INTEGER[4] := {5,8,6,3};
+BEGIN
+    FOR i FROM 1 TO cards.length - 1 STEP 1 DO
+        temp = cards[i]
+        n = i - 1;
+        WHILE (n >= 0 AND temp <= cards[n]) DO
+            cards[n+1] = cards[n];
+            n = n - 1;
+        END_WHILE
+        cards[n+1] = temp
+    END_FOR
+END
